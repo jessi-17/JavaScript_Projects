@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Searching with js</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="/day 5/WhatsApp Image 2023-09-22 at 14.46.25.jpg" alt="">
+        </div>
+        <div class="searchbox">
+            <div class="search-bar">
+                <input id ="movie" onkeyup="searchmovie()" type="text" placeholder="Search movie">
+            </div>
+            <div class="search-icon">
+                <button onclick="searchmovie()"><i class="fas fa-search"  ></i></button>  
+            </div>
+        </div>
+
+    </header>
+    <section class="movies" id="movies"></section>
+    <script src="https://kit.fontawesome.com/343d645bec.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
