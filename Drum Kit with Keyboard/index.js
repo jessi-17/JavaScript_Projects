@@ -1,6 +1,11 @@
 var n = document.querySelectorAll(".drum").length;
 for(var i=0;i<n ;i++){
-    document.querySelectorAll(".drum")[i].addEventListener("click",handle_click);
+    document.querySelectorAll(".drum")[i].addEventListener("click",function(){
+        var buttonInnerHTML = this.innerHTML;
+        make_sound(buttonInnerHTML);
+        buttonanimation(buttonInnerHTML);
+
+    })
 
     //passsing a function as a parameter so that it can only be called when a certain event occured!
 }
@@ -18,6 +23,7 @@ function handle_click(){ //named function
 
 document.addEventListener("keydown",function(event){
    make_sound(event.key);
+   buttonanimation(event.key);
 });
 
 
@@ -56,5 +62,11 @@ function make_sound(key){
             console
             break;
     }
+
+}
+
+function buttonanimation(currentKey){
+    var active_button = document.querySelector("." + currentKey);
+    active_button.classList.add("pressed");
 
 }
