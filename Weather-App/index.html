@@ -1,60 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <a href="">WeatherApp</a>
-    <div class="container">
-      <header>
-        <h5>weahter in</h5>
-        <div class="search-grp">
-          <form action="#">
-            <input type="text" placeholder="type here..." id="search-input" />
-            <button type="submit">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </form>
-        </div>
-        <h3 id="city"></h3>
-        <h6 id="date"></h6>
-      </header>
-      <section>
-          <div class="temperature"><span id="temperature-degree"></span> C </div>
-          <div class="description">
-              <img src="" alt="" id="description-img">
-              <div id="description-text"></div>
-          </div>
-          <div class="details">
-            <div id="humidity" class = 'grp'>
-                <span><i class="fa-solid fa-temperature-empty"></i> Humidity</span>
-                <h3 id="humidity-degree"></h3>
-            </div>
-            <div id="feelslike" class = 'grp'>
-                <span><i class="fa-solid fa-droplet"></i> feels like</span>
-                <h3 id="feelslike-degree"></h3>
-            </div>
-          </div>
-      </section>
-      <button onclick="getLocationData()" id="loc-btn"><i class="fa-solid fa-location-dot"></i> Current location <i class="fa-solid fa-location-dot"></i></button>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f492afda16.js" crossorigin="anonymous"></script>
+</head>
 
+<body>
+    <section class="nav">
+        <nav>
+            <div class="logo">
+                <h1>Weather APP</h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="">current location</a></li>
+                    <li> <i class="fa-solid fa-location-dot"></i></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <div class="outer-container">
+        <div class="container">
+            <h4>WEATHER IN...</h4>
+            <div class="inputs">
+                <input type="text" placeholder="Enter your city">
+                <input id="btn" type="submit" value="🔍">
+            </div>
+            <div class="date">
+                <p id="localtime">If it was my last day on earth</p>
+            </div>
+
+        </div>
+        <div class="weather-Container" id="weather-Container">
+      </div>
     </div>
-  </body>
-  <script src="script.js"></script>
-</html>
+<script src="script.js"></script>
+</body>
+
+</html>     
