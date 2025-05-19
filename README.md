@@ -13,6 +13,7 @@ Here's a brief overview of the projects included in this repository:
 1. **Project 1**: Netflix search options.
 2. **Project 2**: Dice Roll.
 3. **Project 3**: Drum Kit with Keyboard.
+4. **Project 4**: Simon Game.
    ...
 
 ## Usage

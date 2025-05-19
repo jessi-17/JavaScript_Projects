@@ -1,0 +1,29 @@
+<!-- 🎥 Movie Search App
+Description: Users can search for movies, view ratings, posters, and details using the OMDb API.
+
+Concepts: Async JS, API integration, dynamic rendering of results.
+
+📰 News Reader App
+Description: Pulls and displays news headlines from the NewsAPI.
+
+Concepts: fetch, promise handling, API key usage, responsive UI.
+
+
+
+📖 Dictionary App
+Description: Search a word and get definitions, synonyms, examples using an API.
+
+Concepts: Input handling, debounce, API fetching, dynamic UI updates.
+
+🛒 Mini E-Commerce Product Page
+Description: Product catalog from a fake store API (like Fake Store API), with filters.
+
+Concepts: Async JS, filtering, sorting, modals.
+
+🧭 Country Info Finder
+Description: Enter a country name and see flag, population, capital, currency, etc.
+
+API: REST Countries API
+
+
+Concepts: Fetch API, cards layout, error handling. -->
