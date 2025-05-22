@@ -4,11 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">nk
+    <script src="https://kit.fontawesome.com/f492afda16.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section class="view-1">
-
+        <img class="text" src="images/image-removebg-preview (1).png" alt="">
+        <div class="id" id="IDCard">
+        </div>
+        <h2>MINI PROJECTS</h2>
+        <p>designed by <a href="https://github.com/jessi-17">@jessi</a></p>
     </section>
+
+    <section class="view-2">
+        <div class="gitrepo">
+
+        </div>
+        <div class="Aboutme">
+            <h4 id="handwritting"></h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ut dolorem maxime qui adipisci fuga atque deleniti quod labore expedita!</p>
+            <button><a href=""><i class="fa-brands fa-linkedin"></i>LinkedIn</a></button>
+        </div>
+    </section>
+<script>
+    const IDCard = document.getElementById("IDCard");
+    setTimeout(() => {
+        IDCard.innerHTML = `<img src="images/ID.png" alt="">`;
+    }, 500);
+
+    const handwritting = document.getElementById("handwritting");
+    const arr = ['a','b','o','u','t',' ', 'm','e','.','.'];
+    let i = 0;
+    let hasTyped = false;
+
+    function typeanimation() {
+        if (i < arr.length) {
+            handwritting.innerHTML += arr[i];
+            i++;
+            setTimeout(typeanimation, 200);
+        }
+    }
+
+    // Observe when Aboutme section comes into view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasTyped) {
+                hasTyped = true;
+                typeanimation();
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    const aboutSection = document.querySelector('.Aboutme');
+    observer.observe(aboutSection);
+</script>
+
 </body>
 </html>
+
+
