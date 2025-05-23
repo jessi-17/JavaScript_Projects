@@ -56,8 +56,9 @@ body {
 .view-1 h2 {
   position: relative;
   top: -45px;
-  font-size: 3rem;
+  font-size: 3.3rem;
   opacity: 0;
+  font-family: "Pixelify Sans", sans-serif;
   color: rgb(108, 97, 100);
   transform: translateY(20px);
   animation: forH2 1.2s 2.1s ease-out forwards;
@@ -68,6 +69,7 @@ body {
   font-weight: 600;
   color: rgb(79, 116, 138);
   opacity: 0;
+  font-family: "Caveat", cursive;
   text-transform: capitalize;
   animation: forH2 1.2s 2.3s ease-out forwards;
 }
@@ -155,10 +157,13 @@ body {
   gap: 10px;
 }
 .view-2 .Aboutme h4 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-family: "Pixelify Sans", sans-serif;
+  text-transform: capitalize;
 }
 .view-2 .Aboutme p {
+  text-align: left;
+  font-size: 2rem;
   font-family: "Caveat", cursive;
 }
 .view-2 .Aboutme button {
@@ -166,16 +171,35 @@ body {
   padding: 10px;
   border-radius: 30px;
   border: none;
-  background-color: lightgoldenrodyellow;
+  background-color: #F7ECEA;
+  box-shadow: 8px 6px #E5ABAA;
+  transition: all 0.6s ease;
+}
+.view-2 .Aboutme button:active {
+  box-shadow: none;
 }
 .view-2 .Aboutme button a {
   padding: 2px;
   text-decoration: none;
   font-weight: 600;
-  color: darkslateblue;
+  color: rgb(71, 21, 179);
+  font-size: larger;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .view-2 .Aboutme button a i {
+  font-size: 2rem;
   margin-right: 8px;
+}
+@media (min-width: 1024px) {
+  .view-2 {
+    flex-direction: row;
+    gap: 80px;
+  }
+  .view-2 .gitrepo {
+    width: 500px;
+  }
 }
 
 @keyframes moveup {

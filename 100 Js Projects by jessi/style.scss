@@ -62,8 +62,9 @@ body {
     position: relative;
     top: -45px;
     // background-color: aqua;
-    font-size: 3rem;
+    font-size: 3.3rem;
     opacity: 0;
+  font-family: "Pixelify Sans", sans-serif;;
     color: rgb(108, 97, 100);
     transform: translateY(20px);
     animation: forH2 1.2s 2.1s ease-out forwards;
@@ -74,6 +75,7 @@ body {
     font-weight: 600;
     color: rgb(79, 116, 138);
     opacity: 0;
+            font-family: "Caveat", cursive;
     text-transform: capitalize;
     a {
       text-decoration: none;
@@ -172,10 +174,14 @@ body {
     flex-direction: column;
     gap: 10px;
     h4 {
-        font-size: 5rem;
+        font-size: 3rem;
         font-family: "Pixelify Sans", sans-serif;
+        text-transform: capitalize;
     }
+
     p {
+        text-align: left;
+        font-size: 2rem;
         font-family: "Caveat", cursive;
     }
     button {
@@ -185,18 +191,39 @@ body {
         // display: flex;
         // gap: 20px;
         border: none;
-        background-color: lightgoldenrodyellow;
+        
+        background-color: #F7ECEA;
+        box-shadow:8px 6px #E5ABAA;
+        // box-shadow: 30px 20px ;
+        transition: all 0.6s ease;
+        &:active{
+            box-shadow: none;
+        }
       a {
 
         padding: 2px;
         text-decoration: none;
         font-weight: 600;
-        color: darkslateblue;
+        color: rgb(71, 21, 179);
+        font-size: larger;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // color: darkslateblue;
         i {
+            font-size: 2rem;
             margin-right: 8px;
         }
       }
     }
+  }
+  @media(min-width:1024px){
+    flex-direction: row;
+    gap: 80px;
+    .gitrepo{
+        width: 500px;
+    }
+    
   }
 }
 
