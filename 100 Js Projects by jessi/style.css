@@ -118,6 +118,7 @@ body {
 @media (min-width: 1440px) {
   .view-1 {
     height: 100vh;
+    border-radius: 0px 0px 80px 80px;
   }
   .view-1 .text {
     width: 60%;
@@ -132,6 +133,7 @@ body {
 
 .view-2 {
   position: relative;
+  height: 100vh;
   bottom: 30px;
   z-index: 10;
   background-size: cover;
@@ -160,19 +162,23 @@ body {
   font-size: 3rem;
   font-family: "Pixelify Sans", sans-serif;
   text-transform: capitalize;
+  color: rgb(25, 14, 26);
 }
 .view-2 .Aboutme p {
   text-align: left;
-  font-size: 2rem;
-  font-family: "Caveat", cursive;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(206, 95, 95);
+  text-transform: capitalize;
+  font-family: "Caveat";
 }
 .view-2 .Aboutme button {
-  width: 40%;
+  width: 50%;
   padding: 10px;
   border-radius: 30px;
   border: none;
-  background-color: #F7ECEA;
-  box-shadow: 8px 6px #E5ABAA;
+  background-color: #f7ecea;
+  box-shadow: 8px 6px #e5abaa;
   transition: all 0.6s ease;
 }
 .view-2 .Aboutme button:active {
@@ -182,7 +188,7 @@ body {
   padding: 2px;
   text-decoration: none;
   font-weight: 600;
-  color: rgb(71, 21, 179);
+  color: rgba(0, 0, 0, 0.537);
   font-size: larger;
   display: flex;
   align-items: center;
@@ -192,6 +198,17 @@ body {
   font-size: 2rem;
   margin-right: 8px;
 }
+@media (min-width: 968px) {
+  .view-2 {
+    flex-direction: row;
+  }
+  .view-2 .gitrepo {
+    width: 500px;
+  }
+  .view-2 .Aboutme {
+    gap: 30px;
+  }
+}
 @media (min-width: 1024px) {
   .view-2 {
     flex-direction: row;
@@ -200,6 +217,77 @@ body {
   .view-2 .gitrepo {
     width: 500px;
   }
+}
+@media (min-width: 1024px) {
+  .view-2 {
+    height: 120vh;
+    gap: 10%;
+    bottom: 60px;
+  }
+  .view-2 .Aboutme p {
+    width: 700px;
+    padding-right: 200px;
+  }
+  .view-2 .Aboutme button {
+    width: 30%;
+  }
+}
+
+.view-3 {
+  border-radius: 100px 100px 0px 0px;
+  position: relative;
+  top: -100px;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+  border-radius: 50px 50px 0px 0px;
+}
+.view-3 h1 {
+  margin-top: 100px;
+  padding: 20px;
+  text-align: left;
+  font-size: 3.5rem;
+  font-family: "Caveat", cursive;
+}
+@media (min-width: 1024px) {
+  .view-3 h1 {
+    font-size: 6rem;
+  }
+}
+.view-3 .grid-container {
+  top: 0;
+  padding: 20px;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "a" "b" "c" "d" "e";
+  grid-template-areas: "a a b b b c c" "a a b b b c c" "a a d d f c c" "a a d d e e e" "a a d d e e e";
+}
+@media (min-width: 1024px) {
+  .view-3 .grid-container {
+    padding: 50px;
+  }
+}
+.view-3 .grid-container .repo {
+  border-radius: 20px;
+  background-color: lightcyan;
+  height: 200px;
+}
+.view-3 .grid-container .repo1 {
+  grid-area: a;
+}
+.view-3 .grid-container .repo2 {
+  grid-area: b;
+}
+.view-3 .grid-container .repo3 {
+  grid-area: c;
+}
+.view-3 .grid-container .repo4 {
+  grid-area: d;
+}
+.view-3 .grid-container .repo5 {
+  grid-area: e;
 }
 
 @keyframes moveup {

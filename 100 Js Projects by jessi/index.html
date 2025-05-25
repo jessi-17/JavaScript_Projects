@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <script src="https://kit.fontawesome.com/f492afda16.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <section class="view-1">
         <img class="text" src="images/image-removebg-preview (1).png" alt="">
@@ -22,46 +24,92 @@
         </div>
         <div class="Aboutme">
             <h4 id="handwritting"></h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ut dolorem maxime qui adipisci fuga atque deleniti quod labore expedita!</p>
+            <p>hey, i’m jaspreet — part-time pixel perfectionist, full-time softie for beautiful design. i adore the
+                magic that happens when creativity meets code. whether i’m sketching out wireframes, picking the perfect
+                shade of pink, or getting lost in lines of javascript, i’m probably doing it with a cozy hoodie on and a
+                spotify playlist in the background. this portfolio is a little love letter to everything i enjoy
+                building — cute, thoughtful, and just a bit extra 💅✨welcome to my little corner of the internet 💻✨</p>
             <button><a href=""><i class="fa-brands fa-linkedin"></i>LinkedIn</a></button>
         </div>
     </section>
-<script>
-    const IDCard = document.getElementById("IDCard");
-    setTimeout(() => {
-        IDCard.innerHTML = `<img src="images/ID.png" alt="">`;
-    }, 500);
+    <!-- <div style="position: relative; width: 100%; overflow: hidden; line-height: 0;top: -100px;
+    z-index: 1000;">
+        <svg viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+        style="height: 100px; width: 100%;">
+        <path d="M0,0 C300,150 900,0 1200,100 L1200,200 L0,200 Z" fill="pink" />
+        <path d="M0,0 C300,50 900,0 1200,40 L1200,200 L0,200 Z" fill="pink" opacity="0.5" />
+            <path d="M0,0 C300,100 900,0 1200,70 L1200,200 L0,200 Z" fill="pink" opacity="0.7" />
+        </svg>
+    </div> -->
+    <section class="view-3">
+        <h1> Selected Mini PROJECTS</h1>
+        <div class="grid-container">
+            <div class=" repo repo1">
+            </div>
+            <div class=" repo repo2">
 
-    const handwritting = document.getElementById("handwritting");
-    const arr = ['a','b','o','u','t',' ', 'm','e','.','.'];
-    let i = 0;
-    let hasTyped = false;
+            </div>
+            <div class=" repo repo3"></div>
+            <div class=" repo repo4"></div>
+            <div class=" repo repo5"></div>
+            <div class=" repo repo6"></div>
+        </div>
+    </section>
 
-    function typeanimation() {
-        if (i < arr.length) {
-            handwritting.innerHTML += arr[i];
-            i++;
-            setTimeout(typeanimation, 200);
-        }
-    }
 
-    // Observe when Aboutme section comes into view
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !hasTyped) {
-                hasTyped = true;
-                typeanimation();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const IDCard = document.getElementById("IDCard");
+        setTimeout(() => {
+            IDCard.innerHTML = `<img src="images/ID.png" alt="">`;
+        }, 500);
+
+        const handwritting = document.getElementById("handwritting");
+        const arr = ['a', 'b', 'o', 'u', 't', ' ', 'm', 'e', '.', '.'];
+        let i = 0;
+        let hasTyped = false;
+
+        function typeanimation() {
+            if (i < arr.length) {
+                handwritting.innerHTML += arr[i];
+                i++;
+                setTimeout(typeanimation, 200);
             }
-        });
-    }, {
-        threshold: 0.5
-    });
+        }
 
-    const aboutSection = document.querySelector('.Aboutme');
-    observer.observe(aboutSection);
-</script>
+        // Observe when Aboutme section comes into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !hasTyped) {
+                    hasTyped = true;
+                    typeanimation();
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        const aboutSection = document.querySelector('.Aboutme');
+        observer.observe(aboutSection);
+    </script>
 
 </body>
+
 </html>
-
-

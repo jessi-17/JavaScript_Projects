@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bento gridlayout</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .backgrounds {
+        overflow: hidden;
+
+        display: flex;
+        height: 100vh;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        /* gap: 200px; */
+
+        &>div {
+            width: 250px;
+            height: 250px;
+            filter: blur(80px);
+            position: absolute;
+        }
+
+        .red {
+            top: -13%;
+            left: 3%;
+            background-color: rgb(215, 138, 138);
+
+        }
+
+        .blue {
+            left: 6%;
+            bottom: -13%;
+            background-color: plum;
+        }
+
+        .pink {
+            top: -3%;
+            right: 10%;
+            background-color: rgba(239, 111, 194, 0.803);
+
+        }
+
+        .purple {
+            right: -5%;
+            bottom: -12%;
+            background-color: rgb(137, 190, 244);
+        }
+
+        /* 
+        .green {
+            left: 50%;
+            background-color: rgb(180, 245, 180);
+        } */
+    }
+
+    .grid-container {
+        position: absolute;
+        top: 0;
+        padding: 100px;
+        width: 100%;
+        margin: auto;
+        display: grid;
+        height: 100vh;
+        gap: 20px;
+        grid-template-areas:
+            "a a b b b c c"
+            "a a b b b c c"
+            "a a d d f c c"
+            "a a d d e e e"
+            "a a d d e e e";
+
+        .repo {
+            border-radius: 20px;
+            background-color: lightcyan;
+        }
+
+        .repo1 {
+            grid-area: a;
+        }
+
+        .repo2 {
+            grid-area: b;
+        }
+
+        .repo3 {
+            grid-area: c;
+        }
+
+        .repo4 {
+            grid-area: d;
+        }
+
+        .repo5 {
+            grid-area: e;
+        }
+    }
+</style>
+
+<body>
+    <div class="backgrounds">
+        <div class="red"></div>
+        <div class="blue"></div>
+        <div class="pink"></div>
+        <div class="purple"></div>
+        <div class="green"></div>
+    </div>
+    <div class="grid-container">
+        <div class=" repo repo1">
+        </div>
+        <div class=" repo repo2">
+
+        </div>
+        <div class=" repo repo3"></div>
+        <div class=" repo repo4"></div>
+        <div class=" repo repo5"></div>
+        <div class=" repo repo6"></div>
+    </div>
+
+</body>
+
+</html>

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Pixelify+Sans:wght@400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Pixelify+Sans:wght@400..700&display=swap");
 
 * {
   margin: 0;
@@ -64,7 +64,7 @@ body {
     // background-color: aqua;
     font-size: 3.3rem;
     opacity: 0;
-  font-family: "Pixelify Sans", sans-serif;;
+    font-family: "Pixelify Sans", sans-serif;
     color: rgb(108, 97, 100);
     transform: translateY(20px);
     animation: forH2 1.2s 2.1s ease-out forwards;
@@ -75,7 +75,7 @@ body {
     font-weight: 600;
     color: rgb(79, 116, 138);
     opacity: 0;
-            font-family: "Caveat", cursive;
+    font-family: "Caveat", cursive;
     text-transform: capitalize;
     a {
       text-decoration: none;
@@ -131,6 +131,7 @@ body {
   }
   @media (min-width: 1440px) {
     height: 100vh;
+    border-radius: 0px 0px 80px 80px;
     .text {
       width: 60%;
     }
@@ -147,7 +148,7 @@ body {
 
 .view-2 {
   position: relative;
-  // height: 100vh;
+  height: 100vh;
   bottom: 30px;
   z-index: 10;
   background-size: cover;
@@ -160,6 +161,7 @@ body {
   justify-content: space-between;
   gap: 40px;
   align-items: center;
+  // border-radius: 0px 0px 300px 0px;
   .gitrepo {
     // img {
     // flex: 1;
@@ -174,59 +176,158 @@ body {
     flex-direction: column;
     gap: 10px;
     h4 {
-        font-size: 3rem;
-        font-family: "Pixelify Sans", sans-serif;
-        text-transform: capitalize;
+      font-size: 3rem;
+      font-family: "Pixelify Sans", sans-serif;
+      text-transform: capitalize;
+      color: rgb(25, 14, 26);
     }
 
     p {
-        text-align: left;
-        font-size: 2rem;
-        font-family: "Caveat", cursive;
+      text-align: left;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: rgb(206, 95, 95);
+      text-transform: capitalize;
+      font-family: "Caveat";
     }
     button {
-        width: 40%;
-        padding: 10px;
-        border-radius: 30px;
-        // display: flex;
-        // gap: 20px;
-        border: none;
-        
-        background-color: #F7ECEA;
-        box-shadow:8px 6px #E5ABAA;
-        // box-shadow: 30px 20px ;
-        transition: all 0.6s ease;
-        &:active{
-            box-shadow: none;
-        }
+      width: 50%;
+      padding: 10px;
+      border-radius: 30px;
+      // display: flex;
+      // gap: 20px;
+      border: none;
+      background-color: #f7ecea;
+      box-shadow: 8px 6px #e5abaa;
+      // box-shadow: 30px 20px ;
+      transition: all 0.6s ease;
+      &:active {
+        box-shadow: none;
+      }
       a {
-
         padding: 2px;
         text-decoration: none;
         font-weight: 600;
-        color: rgb(71, 21, 179);
+        color: rgba(0, 0, 0, 0.537);
         font-size: larger;
         display: flex;
         align-items: center;
         justify-content: center;
         // color: darkslateblue;
         i {
-            font-size: 2rem;
-            margin-right: 8px;
+          font-size: 2rem;
+          margin-right: 8px;
         }
       }
     }
   }
-  @media(min-width:1024px){
+  @media (min-width: 968px) {
+    flex-direction: row;
+    .gitrepo {
+      width: 500px;
+    }
+    .Aboutme {
+      gap: 30px;
+    }
+  }
+  @media (min-width: 1024px) {
     flex-direction: row;
     gap: 80px;
-    .gitrepo{
-        width: 500px;
+    .gitrepo {
+      width: 500px;
     }
-    
+  }
+  @media (min-width: 1024px) {
+    height: 120vh;
+    gap: 10%;
+    bottom: 60px;
+    .Aboutme {
+      p {
+        width: 700px;
+        padding-right: 200px;
+      }
+      button {
+        width: 30%;
+      }
+    }
   }
 }
 
+.view-3 {
+  // background-color: #f7dedd;
+  // background-color: rgb(251, 242, 242);
+  border-radius: 100px 100px 0px 0px;
+  position: relative;
+  top: -100px;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 00;
+  border-radius: 50px 50px 0px 0px;
+  h1{
+    margin-top: 100px;
+    padding: 20px;
+    text-align: left;
+    font-size: 3.5rem;
+    font-family: "Caveat", cursive;
+    @media(min-width:1024px){
+      font-size: 6rem;
+      
+    }
+  }
+  .grid-container {
+    // position: absolute;
+    top: 0;
+    padding: 20px;
+    // padding: 100px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    // height: 100vh;
+    gap: 20px;
+    grid-template-areas: 
+    "a"
+    "b"
+    "c"
+    "d"
+    "e";
+    grid-template-areas:
+      "a a b b b c c"
+      "a a b b b c c"
+      "a a d d f c c"
+      "a a d d e e e"
+      "a a d d e e e";
+    
+    @media(min-width:1024px){
+      padding: 50px;
+
+    }
+    .repo {
+      border-radius: 20px;
+      background-color: lightcyan;
+      height: 200px;
+    }
+
+    .repo1 {
+      grid-area: a;
+    }
+
+    .repo2 {
+      grid-area: b;
+    }
+
+    .repo3 {
+      grid-area: c;
+    }
+
+    .repo4 {
+      grid-area: d;
+    }
+
+    .repo5 {
+      grid-area: e;
+    }
+  }
+}
 @keyframes moveup {
   0% {
     opacity: 0;
