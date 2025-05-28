@@ -83,9 +83,31 @@
             border-radius: 20px;
             background-color: lightcyan;
         }
-
+        
         .repo1 {
             grid-area: a;
+            background:linear-gradient(rgba(0,0,0,0.001),rgba(0,0,0,0.9));
+            /* background: url('images/Screenshot\ 2025-05-28\ 120121.png'); */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .repo1 .overlay-text{
+            position: absolute;
+            bottom: 5%;
+            padding: 15px;
+            display: flex;
+            gap: 50px;
+            flex-direction: column;
+            h1{
+
+            }
+            .btn{
+                display: flex;
+                gap: 20px;
+                /* float: left; */
+            }
+
         }
 
         .repo2 {
@@ -116,6 +138,15 @@
     </div>
     <div class="grid-container">
         <div class=" repo repo1">
+            <!-- <img src="images/Screenshot 2025-05-28 120121.png" alt=""> -->
+            <div class="overlay-text">
+                <!-- <img src="images/Screenshot 2025-05-28 120121.png" alt=""> -->
+                <h1>project title</h1>
+                <div class="btn">
+                    <button><a href="#">Gitlink</a></button>
+                    <button><a href="#">livedemo</a></button>
+                </div>
+            </div>
         </div>
         <div class=" repo repo2">
 

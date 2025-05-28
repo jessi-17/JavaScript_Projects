@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    html,body{
+        width: 100%;
+        height: 100%;
+    }
+    .container{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+        /* height: ; */
+        /* position: relative; */
+        .innerbackground{
+            width: 80%;
+            height: 600px;
+            /* border:10px solid brown; */
+            border-radius: 30px;
+            padding: 10px;
+            /* box-shadow: 10px 10px 1px lightgoldenrodyellow ; */
+            box-shadow: -10px -10px 1px rgb(247, 208, 214) ;
+            background-color: lightgoldenrodyellow;
+            cursor: pointer;
+            .image{
+                position: relative;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    border-radius: 20px;
+
+                }
+            }
+            .overlay-text{
+                background: linear-gradient(rgba(128, 128, 128, 0.178),rgba(0, 0, 0, 0.562));
+                position: absolute;
+                bottom: 1%;
+                border-radius: 20px;
+                transform: translateY(120px);
+                width: 100%;
+                transition: all 0.5s ease-in-out;
+                display: flex;
+                height: 20vh;
+                overflow: hidden;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+                /* display: none; */
+                /* top:-10px; */
+                h3{
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-size: 1.8rem;
+                    color: rgb(253, 255, 239);
+                    text-shadow: 1px 2px  3px black;
+
+                }
+                .buttons{
+                    display: flex;
+                    gap: 20px;
+                    input[type="submit"]{
+                        outline: none;
+                        border: none;
+                        background-color: rgb(212, 204, 154);
+                        width: 50%;
+                        padding: 10px;
+                        text-transform: capitalize;
+                        font-size: 1.02rem;
+                        color:rgb(51, 45, 45);
+                        border-radius:10px ;
+                        box-shadow: 4px 4px rgb(226, 226, 203);
+                        transition: all 0.3s ease-in-out;
+                        cursor: pointer;
+                        &:active{
+                            box-shadow: none;
+                        }
+                    }
+
+                }
+            }
+            &:hover{
+                img{
+                    scale: 1.00;
+                }
+                .overlay-text{
+                    transform: translateY(0px);
+                }
+            }
+        }
+    }
+</style>
+<body>
+    <div class="container">
+            <div class="innerbackground">
+                <div class="image">
+                    <img src="images/Screenshot 2025-05-28 120121.png" alt="">
+                    <div class="overlay-text">
+                        <h3>Title of the project</h3>
+                        <div class="buttons">
+                            <input type="submit" value="Gitlink">
+                            <input type="submit" value="livedemo">
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    
+</body>
+</html>
