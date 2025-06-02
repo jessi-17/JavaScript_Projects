@@ -1,162 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bento gridlayout</title>
-</head>
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    .backgrounds {
-        overflow: hidden;
-
-        display: flex;
-        height: 100vh;
-        position: relative;
-        align-items: center;
-        justify-content: center;
-        /* gap: 200px; */
-
-        &>div {
-            width: 250px;
-            height: 250px;
-            filter: blur(80px);
-            position: absolute;
-        }
-
-        .red {
-            top: -13%;
-            left: 3%;
-            background-color: rgb(215, 138, 138);
-
-        }
-
-        .blue {
-            left: 6%;
-            bottom: -13%;
-            background-color: plum;
-        }
-
-        .pink {
-            top: -3%;
-            right: 10%;
-            background-color: rgba(239, 111, 194, 0.803);
-
-        }
-
-        .purple {
-            right: -5%;
-            bottom: -12%;
-            background-color: rgb(137, 190, 244);
-        }
-
-        /* 
-        .green {
-            left: 50%;
-            background-color: rgb(180, 245, 180);
-        } */
+      box-sizing: border-box;
     }
 
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+
+      overflow-x: hidden;
+    }
+    body{
+        padding: 50px;
+    }
     .grid-container {
-        position: absolute;
-        top: 0;
-        padding: 100px;
-        width: 100%;
-        margin: auto;
-        display: grid;
-        height: 100vh;
-        gap: 20px;
-        grid-template-areas:
-            "a a b b b c c"
-            "a a b b b c c"
-            "a a d d f c c"
-            "a a d d e e e"
-            "a a d d e e e";
-
-        .repo {
-            border-radius: 20px;
-            background-color: lightcyan;
-        }
-        
-        .repo1 {
-            grid-area: a;
-            background:linear-gradient(rgba(0,0,0,0.001),rgba(0,0,0,0.9));
-            /* background: url('images/Screenshot\ 2025-05-28\ 120121.png'); */
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        .repo1 .overlay-text{
-            position: absolute;
-            bottom: 5%;
-            padding: 15px;
-            display: flex;
-            gap: 50px;
-            flex-direction: column;
-            h1{
-
-            }
-            .btn{
-                display: flex;
-                gap: 20px;
-                /* float: left; */
-            }
-
-        }
-
-        .repo2 {
-            grid-area: b;
-        }
-
-        .repo3 {
-            grid-area: c;
-        }
-
-        .repo4 {
-            grid-area: d;
-        }
-
-        .repo5 {
-            grid-area: e;
-        }
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: repeat(6, 100px);
+      gap: 10px;
     }
-</style>
 
+    .cell {
+      background-color: rgb(243, 166, 196);
+      border-radius: 12px;
+    }
+
+    .cell1 { grid-column: span 2; grid-row: 1 / 7; }
+    .cell2 { grid-column: span 3; grid-row: 1 / 3; }
+    .cell3 { grid-column: 3 / span 2; grid-row: 3 / 7; }
+    .cell4 { grid-column: 5 / 6; grid-row: 3; }
+    .cell5 { grid-column: 6 / span 2; grid-row: 1 / span 3; }
+    .cell6 { grid-column: span 3; grid-row: 4 / 7; }
+
+    @media(max-width: 1024px) {
+      .grid-container {
+        gap: 10px;
+        grid-template-areas:
+          "a a a a b b b"
+          "a a a a b b b"
+          "c c d d b b b"
+          "c c d d b b b"
+          "e e e f f f f"
+          "e e e f f f f";
+      }
+
+      .cell1 { grid-area: a; }
+      .cell2 { grid-area: b; }
+      .cell3 { grid-area: c; }
+      .cell4 { grid-area: d; }
+      .cell5 { grid-area: e; }
+      .cell6 { grid-area: f; }
+    }
+
+    @media(max-width: 768px) {
+      .grid-container {
+        gap: 10px;
+        grid-template-areas:
+          "a a a b b b b"
+          "a a a b b b b"
+          "c c c c d d d"
+          "c c c c d d d"
+          "e e e f f f f"
+          "e e e f f f f";
+      }
+    }
+  </style>
+</head>
 <body>
-    <div class="backgrounds">
-        <div class="red"></div>
-        <div class="blue"></div>
-        <div class="pink"></div>
-        <div class="purple"></div>
-        <div class="green"></div>
-    </div>
-    <div class="grid-container">
-        <div class=" repo repo1">
-            <!-- <img src="images/Screenshot 2025-05-28 120121.png" alt=""> -->
-            <div class="overlay-text">
-                <!-- <img src="images/Screenshot 2025-05-28 120121.png" alt=""> -->
-                <h1>project title</h1>
-                <div class="btn">
-                    <button><a href="#">Gitlink</a></button>
-                    <button><a href="#">livedemo</a></button>
-                </div>
-            </div>
-        </div>
-        <div class=" repo repo2">
-
-        </div>
-        <div class=" repo repo3"></div>
-        <div class=" repo repo4"></div>
-        <div class=" repo repo5"></div>
-        <div class=" repo repo6"></div>
-    </div>
-
+  <div class="grid-container">
+    <div class="cell cell1"></div>
+    <div class="cell cell2"></div>
+    <div class="cell cell3"></div>
+    <div class="cell cell4"></div>
+    <div class="cell cell5"></div>
+    <div class="cell cell6"></div>
+  </div>
 </body>
-
 </html>
