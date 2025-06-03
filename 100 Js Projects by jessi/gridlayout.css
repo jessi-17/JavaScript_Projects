@@ -42,10 +42,11 @@
         .cell1 {
             grid-column: span 2;
             grid-row: 1 / 6;
-            background: url(images/cell-1.png);
+            background: url(https://i.pinimg.com/736x/fa/13/78/fa1378c01f7aec20bd540e29d5051213.jpg);
             background-repeat: no-repeat;
-            background-size: 130%;
+            /* background-size: 130%; */
             background-position: center;
+            background-size: cover;
 
         }
 
@@ -53,9 +54,9 @@
             background-repeat: no-repeat;
             grid-column: span 3;
             grid-row: 1 / 3;
-            background: url(images/cell-extra.png);
+            background: url(https://i.pinimg.com/736x/0f/c0/2e/0fc02eccc72061b5969fefa8969a52d4.jpg);
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: cover;
             background-position: center;
             /* rotate: 90deg; */
 
@@ -65,9 +66,9 @@
             background-repeat: no-repeat;
             grid-column: 3 / span 2;
             grid-row: 3 / 6;
-            background: url(images/cell-3.png);
+            background: url(https://i.pinimg.com/736x/a0/60/31/a06031f3d08ddda86466be5ac419c28f.jpg);
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size:cover;
 
         }
 
@@ -75,16 +76,17 @@
             background-repeat: no-repeat;
             grid-column: 5 / 6;
             grid-row: 3;
-            background: url(images/cell-2.png);
+            background: url(https://i.pinimg.com/736x/65/cd/29/65cd29dc5bc2cde9fbcc489fc0f177a7.jpg);
             background-repeat: no-repeat;
             background-size: cover;
+            background-position: center;
 
         }
 
         .cell5 {
             grid-column: 6 / span 2;
             grid-row: 1 / span 3;
-            background: url(images/cell-5\ \(2\).png);
+            background: url(https://i.pinimg.com/736x/c8/6d/5e/c86d5e5c7eaf4d3f6c2dc35965422d5a.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             height: 100%;
@@ -95,7 +97,7 @@
         .cell6 {
             grid-column: span 3;
             grid-row: 4 / 6;
-            background: url(images/cell-6.png);
+            background: url(https://i.pinimg.com/736x/fb/d3/39/fbd339ffc4263127d00d93296a3eefa5.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             /* overflow: hidden; */

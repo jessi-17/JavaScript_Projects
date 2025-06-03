@@ -162,7 +162,7 @@ body {
 }
 .view-2 .gitrepo img {
   overflow: hidden;
-  width: 540px;
+  width: 440px;
   transition: all 0.5s ease-in-out;
 }
 .view-2 .gitrepo img:hover {
@@ -254,7 +254,7 @@ body {
 }
 
 .view-3 {
-  height: 120vh;
+  height: 130vh;
   overflow: hidden;
 }
 .view-3 h1 {
@@ -299,7 +299,7 @@ body {
   grid-area: e;
 }
 
-button {
+.forextra {
   background: linear-gradient(135deg, #f2ffa6, #fcfad3);
   border: none;
   display: flex;
@@ -308,7 +308,7 @@ button {
   text-align: center;
   margin-left: 10px;
   padding: 10px 24px;
-  width: 40%;
+  width: 30%;
   margin: auto;
   margin-top: 30px;
   border-radius: 30px;
@@ -316,10 +316,9 @@ button {
   box-shadow: 0 5px 10px rgba(202, 216, 95, 0.3);
   transition: all 0.3s ease;
 }
-button a {
+.forextra a {
   text-decoration: none;
   font-size: 2rem;
-  font-family: "Courier New", Courier, monospace;
 }
 
 .view-4 {
